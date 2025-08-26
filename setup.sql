@@ -1,0 +1,22 @@
+CREATE DATABASE IF NOT EXISTS CS;
+USE CS;
+
+CREATE TABLE IF NOT EXISTS profile (
+  pid   INT PRIMARY KEY,
+  Name  VARCHAR(50),
+  email VARCHAR(100),
+  phone VARCHAR(20),
+  dob   DATE
+);
+
+CREATE TABLE IF NOT EXISTS user (
+  pid INT,
+  password VARCHAR(50),
+  email VARCHAR(100)
+);
+
+CREATE TABLE IF NOT EXISTS diary (
+  pid INT,
+  did VARCHAR(50),
+  loc VARCHAR(200)
+);
