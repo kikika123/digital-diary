@@ -1,15 +1,35 @@
-# Digital Diary 
+# Digital Diary 📝
 
-A high school project built in Python that lets users create and manage a personal diary with login, account creation, and OTP email verification.
+A simple desktop **Digital Diary** built with **Python (Tkinter)** and **MySQL**.  
+Users can register (with email OTP), log in, and create/open/save diary entries.
 
-## Features
-- User registration with OTP verification (via Outlook SMTP)
-- Secure login system with MySQL database
-- Create, open, and save diary entries
-- GUI built using Tkinter
-- File storage with pickle for saving diary content
+![GitHub repo size](https://img.shields.io/github/repo-size/kikika123/digital-diary)
+![GitHub stars](https://img.shields.io/github/stars/kikika123/digital-diary?style=social)
 
-## Installation
+---
+
+## ✨ Features
+- Account creation with **OTP email verification**
+- **Login** and profile store (MySQL)
+- Create / open / save diary entries
+- Simple **Tkinter GUI**
+- File persistence (pickle)
+
+---
+
+## 📦 Tech Stack
+- Python 3.x, Tkinter
+- MySQL (tables provided in `setup.sql`)
+- SMTP (Outlook) for OTP
+- `.env` + python-dotenv for credentials
+
+---
+
+## 🚀 Quick Start
 ```bash
+git clone https://github.com/kikika123/digital-diary.git
+cd digital-diary
+python -m venv .venv
+# Windows
+.\.venv\Scripts\activate
 pip install -r requirements.txt
-python main.py
