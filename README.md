@@ -1,4 +1,4 @@
-# Digital Diary 📝
+# Digital Diary 
 
 A high school project built in Python that lets users create and manage a personal diary with login, account creation, and OTP email verification.
 
