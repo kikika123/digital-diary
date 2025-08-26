@@ -6,6 +6,7 @@ from smtplib import *
 from tkinter import filedialog
 import pickle
 from tkinter import messagebox
+import os
 
 def generate_PID():
     mydb=connect(host="localhost",user="root",database="CS")
@@ -72,8 +73,10 @@ def send_otp(Email,bu1):
     smtpobj = SMTP('smtp.outlook.com', 587)
     r=randint(100000,999999)
     smtpobj.starttls()
-    senderemail_id="digitaldiary123@outlook.com"
-    senderemail_id_password="digi@diary"
+    
+    senderemail_id = os.environ.get("DD_SENDER_EMAIL")
+    senderemail_id_password = os.environ.get("DD_SENDER_PASS")
+
     receiveremail_id= Email
     smtpobj.login(senderemail_id, senderemail_id_password)
     message = """From: From python program <{0}>
